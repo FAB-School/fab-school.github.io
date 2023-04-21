@@ -1,0 +1,27 @@
+{
+  "name": "fab-school.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "env NODE_ENV=production npx eleventy --pathprefix 'eleventy-gh-demo'",
+    "serve": "npx eleventy --serve",
+    "debug": "DEBUG=* npx eleventy",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FAB-School/fab-school.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FAB-School/fab-school.github.io/issues"
+  },
+  "homepage": "https://github.com/FAB-School/fab-school.github.io#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "eleventy-plugin-i18n": "0.1.3"
+  }
+}
