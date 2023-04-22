@@ -3,4 +3,5 @@ node_modules/
 .idea
 dist/
 docs/
+public/
 .DS_Store
