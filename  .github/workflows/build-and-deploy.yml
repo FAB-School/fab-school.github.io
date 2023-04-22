@@ -15,20 +15,16 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+     - uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 16
           cache: 'npm'
-
-      - name: Install packages
-        run: npm ci
-
-      - name: Run npm build
-        run: npm run build:prod
+          cache-dependency-path: subdir/package-lock.json
+      - run: npm ci
+      - run: npm run build
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          publish_dir: ./dist
+          publish_dir: ./docs
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
