@@ -10,6 +10,6 @@ module.exports = function (eleventyConfig) {
     },
   })
   return {
-    dir: { input: 'src', output: 'dist' },
+    dir: { input: 'src', output: 'docs' },
   }
 }
