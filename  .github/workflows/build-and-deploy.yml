@@ -10,14 +10,18 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Install and Build
-        run: |
-          npm install
-          npm run build
+      
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: "npm"
+          cache-dependency-path: package-lock.json
+      - run: npm ci
+      - run: npm run build
 
       - name: Deploy to gh-pages
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          FOLDER: docs
-          CLEAN: true
+          working-directory: ./docs
+          publish_dir: ./docs
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
