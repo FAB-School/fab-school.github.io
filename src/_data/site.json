@@ -1,0 +1,23 @@
+{
+    "repoUrl": "https://github.com/creasoft-dev/fundamenty",
+    "repoDefaultBranch": "main",
+    "rootUrl": "https://fundamenty.netlify.app",
+
+    "name": "Fab school",
+    "logoUrl": "/images/logo.png",
+    "faviconUrl": "/images/logo.ico",
+    "googleTagId": "",
+
+    "defaultLang": "en",
+    "langs": [{
+        "id": "en",
+        "name": "English"
+    }, {
+        "id": "tr",
+        "name": "Türkçe"
+    },
+    {
+        "id": "ru",
+        "name": "Русский"
+    }]
+}

@@ -1,0 +1,12 @@
+{
+    "top": [{
+            "title": "About",
+            "href": "/en/pages/about/"
+        }
+    ],
+    "side": [{
+            "title": "Robotics",
+            "href": ""
+        }
+    ]
+}
