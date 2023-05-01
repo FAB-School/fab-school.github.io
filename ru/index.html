@@ -1,17 +1,17 @@
 <!doctype html>
 <html lang="">
-  <head profile="http://www.w3.org/2005/10/profile">
+  <head>
     
     <title>FAB SCHOOL - Fab school</title>
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="icon" type="image/png" href="/dist/images/logo.ico">
-    <link rel="stylesheet" type="text/css" href="/dist/assets/main.css"/>
+    <link rel="stylesheet" type="text/css" href="/styles/main.css"/>
     <link href="https://unpkg.com/prismjs@1.21.0/themes/prism-okaidia.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
   </head>
-  <body>
+  <body style="background-image: url('/images/computing.jpg')">
     <nav id="header" class=" fixed w-full z-10 top-0 bg-gray-100 shadow-md ">
   <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-4  ">
     <div class="pl-4 flex items-center">
@@ -37,52 +37,55 @@
       </ul>
 
       
-      <ul class="list-reset lg:flex justify-end items-center list-none">
+      <select>
+       
         
-          <li class="bg-red mr-3 lg:py-0">
-            <a href="/dist/en" class="inline-block text-xs no-underline">English</a>
-          </li>
+          <option value="us">
+            English
+          </option>
         
-          <li class="bg-red mr-3 lg:py-0">
-            <a href="/dist/tr" class="inline-block text-xs no-underline">Türkçe</a>
-          </li>
         
-          <li class="bg-red mr-3 lg:py-0">
-            <a href="/dist/ru" class="inline-block text-xs no-underline">Русский</a>
-          </li>
+          <option value="tr">
+            Türkçe
+          </option>
         
-      </ul>
+        
+          <option value="ru">
+            Русский
+          </option>
+        
+      </select>
+      
 
     </div>
   </div>
 </nav>
 
-    <img src="/images/computing.jpg"/>
-    <div class="container w-full flex flex-wrap mx-auto px-2 pt-8 lg:pt-16 mt-16">
-      <div class="content w-full">
-        Главная страница
-      </div>
-      
-      <div class="content w-full">
-        <div id="disqus_thread"></div>
-      </div>
-      
-    </div>
+    
 
+      <div class="container w-full flex flex-wrap mx-auto px-2 pt-8 lg:pt-16 mt-16">
+        <div class="content w-full">
+          Главная страница
+        </div>
+        
+        <div class="content w-full">
+          <div id="disqus_thread"></div>
+        </div>
+        
+      </div>
     <footer class="w-full bg-gray-100 mt-6 p-2 border-t-1 border-gray-300">
   <div class="w-full container mx-auto flex flex-col items-center justify-center text-sm text-gray-600">
     <div class="block">
       Fab school.
     </div>
     <div>
-      Site generated on Apr 26, 2023. Site generator based on <a href="https://github.com/creasoft-dev/fundamenty">Fundamenty</a> by <a href="https://creasoft.dev/">CreaSoft.dev</a>.
       Powered by <a href="https://www.11ty.dev/" >Eleventy</a>
     </div>
   </div>
 </footer>
 
 
-    <script src="/dist/assets/main.js"></script>
+    <script src="/scripts/main.js"></script>
 
     <script>
 

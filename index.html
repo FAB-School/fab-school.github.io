@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="">
+<html lang="" class="landing">
   <head profile="http://www.w3.org/2005/10/profile">
     
     <title>FAB SCHOOL - Fab school</title>
@@ -7,82 +7,107 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="icon" type="image/png" href="/dist/images/logo.ico">
-    <link rel="stylesheet" type="text/css" href="/dist/assets/main.css"/>
+    <link rel="stylesheet" type="text/css" href="/dist/styles/main.css"/>
+    <link rel="stylesheet" type="text/css" href="/styles/slider.css"/>
+    <script src="/scripts/slider.js"></script>
+    <script src="/scripts/gradient.js"></script>
     <link href="https://unpkg.com/prismjs@1.21.0/themes/prism-okaidia.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+    <style>
+		.hero {
+      background: linear-gradient(to top, transparent, #1a1a1a38 70%), url(https://cdn.pixabay.com/photo/2016/10/11/21/43/geometric-1732847_1280.jpg) no-repeat center center;
+      background-size: cover;
+		}
+	  </style>
   </head>
-  <body>
-    <nav id="header" class=" fixed w-full z-10 top-0 bg-gray-100 shadow-md ">
-  <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-4  ">
-    <div class="pl-4 flex items-center">
-      <img src="/dist/images/logo.png" alt="Logo" class="h-5 mr-1"/>
-      <a  href="/dist/ " class="no-underline hover:no-underline font-extrabold text-xl" >
-        Fab school
-      </a>
-    </div>
-    <div class="block md:hidden pr-4">
-      <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-purple-500 appearance-none focus:outline-none">
-        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <title>Menu</title>
-          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
-        </svg>
-      </button>
-    </div>
-    <div class="w-full flex-grow md:flex  md:content-center md:items-center md:w-auto hidden mt-2 md:mt-0 z-20" id="nav-content">
-      <div class="flex-1 w-full mx-auto max-w-sm content-center py-4 md:py-0">
-      
-      </div>
-      <ul class="list-reset md:flex justify-end items-center list-none text-sm">
-        
-      </ul>
+  <body class="gradient">
+  <main >
+      <section>
+        <h1 class="font-play text-center text-white">Fab School</h1>
+      </section>
+      <section class="wrapper">
+        <button class="prev" type="button" onclick="prevSlide(this)">➤</button>
+        <div class="slider">
+          <div class="item">
+            <img src="./images/cbm.jpg" />
+            <div class="title">Computer-based math</div>
+          </div>
 
-      
-      <ul class="list-reset lg:flex justify-end items-center list-none">
+          <div class="item">
+            <img src="./images/robotics.jpg" />
+            <div class="info">
+              <div class="title">Robotics</div>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="./images/visual_coding.jpg" />
+            <div class="title">Visual coding</div>
+          </div>
+
+          <div class="item">
+            <img  src="./images/electronics.jpg" />
+            <div class="title">Electronics</div>
+          </div>
+
+          <div class="item">
+            <img src="./images/recreational_math.jpg" />
+            <div class="title">Recreational math</div>
+          </div>
+
+          <div class="item">
+            <img src="./images/programming.jpg" />
+            <div class="title">Programming</div>
+          </div>
+          <div class="item">
+            <img src="./images/stem.jpg" />
+            <div class="title">STEM</div>
+          </div>
+        </div>
+        <button class="next" type="button" onclick="nextSlide(this)">➤</button>
+      </section>
+
+      <div class="container w-full flex flex-wrap mx-auto px-2 pt-8 lg:pt-16 mt-16">
+        <div class="content w-full">
+          
+        </div>
         
-          <li class="bg-red mr-3 lg:py-0">
-            <a href="/dist/en" class="inline-block text-xs no-underline">English</a>
+        <div class="content w-full">
+          <div id="disqus_thread"></div>
+        </div>
+        
+      </div>
+      <ol class="languages">
+        
+          <li>
+            <a href="/us">
+            <img src="https://flagcdn.com/us.svg" height="96" alt="English"/>
+            <h3>English</h3>
+            </a>
           </li>
         
-          <li class="bg-red mr-3 lg:py-0">
-            <a href="/dist/tr" class="inline-block text-xs no-underline">Türkçe</a>
+          <li>
+            <a href="/tr">
+            <img src="https://flagcdn.com/tr.svg" height="96" alt="Türkçe"/>
+            <h3>Türkçe</h3>
+            </a>
           </li>
         
-          <li class="bg-red mr-3 lg:py-0">
-            <a href="/dist/ru" class="inline-block text-xs no-underline">Русский</a>
+          <li>
+            <a href="/ru">
+            <img src="https://flagcdn.com/ru.svg" height="96" alt="Русский"/>
+            <h3>Русский</h3>
+            </a>
           </li>
         
-      </ul>
+      <ol>
+    </main>
 
-    </div>
-  </div>
-</nav>
-
-    <img src="/images/computing.jpg"/>
-    <div class="container w-full flex flex-wrap mx-auto px-2 pt-8 lg:pt-16 mt-16">
-      <div class="content w-full">
-        
-      </div>
-      
-      <div class="content w-full">
-        <div id="disqus_thread"></div>
-      </div>
-      
-    </div>
-
-    <footer class="w-full bg-gray-100 mt-6 p-2 border-t-1 border-gray-300">
-  <div class="w-full container mx-auto flex flex-col items-center justify-center text-sm text-gray-600">
-    <div class="block">
-      Fab school.
-    </div>
-    <div>
-      Site generated on Apr 26, 2023. Site generator based on <a href="https://github.com/creasoft-dev/fundamenty">Fundamenty</a> by <a href="https://creasoft.dev/">CreaSoft.dev</a>.
-      Powered by <a href="https://www.11ty.dev/" >Eleventy</a>
-    </div>
-  </div>
-</footer>
+    
+    
 
 
-    <script src="/dist/assets/main.js"></script>
+    <script src="/scripts/main.js"></script>
 
     <script>
 
@@ -155,6 +180,28 @@
         }
         return false;
       }
+
+// https://github.com/tailwindtoolbox/Landing-Page/blob/master/index.html
+
+  var header = document.getElementById("header");
+  header.classList.add("bg-opacity-0");
+  header.classList.add("text-white");
+  
+  document.addEventListener('scroll', function() {
+    /*Apply classes for slide in bar*/
+	  scrollpos = window.scrollY;
+
+    if(scrollpos > 10){
+	    header.classList.remove("bg-opacity-0");
+      header.classList.remove("text-white");
+    }
+    else {
+      // Transparent
+      header.classList.add("bg-opacity-0");
+      header.classList.add("text-white");
+    }
+  });
+
 
 
     </script>
