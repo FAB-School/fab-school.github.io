@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ locale }}">
+<html lang="{{ locale }}" class="landing">
   <head profile="http://www.w3.org/2005/10/profile">
     {% if site.googleTagId %}
       <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -19,7 +19,10 @@
     <meta name="description" content="{{ description }}">
     <meta name="keywords" content="{{ keywords }}">
     <link rel="icon" type="image/png" href="{{ site.faviconUrl | url  }}">
-    <link rel="stylesheet" type="text/css" href="{{ '/assets/main.css' | url }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ '/styles/main.css' | url }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ '/styles/slider.css' }}"/>
+    <script src="{{ '/scripts/slider.js' }}"></script>
+    <script src="{{ '/scripts/gradient.js' }}"></script>
     <link href="https://unpkg.com/prismjs@1.21.0/themes/prism-okaidia.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
     <style>
@@ -29,11 +32,77 @@
 		}
 	  </style>
   </head>
-  <body>
-    {% include './top-nav.njk' %}
+  <body class="gradient">
+  <main >
+      <section>
+        <h1 class="font-play text-center text-white">Fab School</h1>
+      </section>
+      <section class="wrapper">
+        <button class="prev" type="button" onclick="prevSlide(this)">➤</button>
+        <div class="slider">
+          <div class="item">
+            <img src="./images/cbm.jpg" />
+            <div class="title">Computer-based math</div>
+          </div>
+
+          <div class="item">
+            <img src="./images/robotics.jpg" />
+            <div class="info">
+              <div class="title">Robotics</div>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="./images/visual_coding.jpg" />
+            <div class="title">Visual coding</div>
+          </div>
+
+          <div class="item">
+            <img  src="./images/electronics.jpg" />
+            <div class="title">Electronics</div>
+          </div>
+
+          <div class="item">
+            <img src="./images/recreational_math.jpg" />
+            <div class="title">Recreational math</div>
+          </div>
+
+          <div class="item">
+            <img src="./images/programming.jpg" />
+            <div class="title">Programming</div>
+          </div>
+          <div class="item">
+            <img src="./images/stem.jpg" />
+            <div class="title">STEM</div>
+          </div>
+        </div>
+        <button class="next" type="button" onclick="nextSlide(this)">➤</button>
+      </section>
+
+      <div class="container w-full flex flex-wrap mx-auto px-2 pt-8 lg:pt-16 mt-16">
+        <div class="content w-full">
+          {{ content | safe }}
+        </div>
+        {% if not (disableComments or false) %}
+        <div class="content w-full">
+          <div id="disqus_thread"></div>
+        </div>
+        {% endif %}
+      </div>
+      <ol class="languages">
+        {% for lang in site.langs %}
+          <li>
+            <a href="/{{lang.id}}">
+            <img src="https://flagcdn.com/{{lang.id}}.svg" height="96" alt="{{lang.name}}"/>
+            <h3>{{lang.name}}</h3>
+            </a>
+          </li>
+        {% endfor %}
+      <ol>
+    </main>
 
     {# Hero #}
-    <div class="w-full flex mx-auto hero">
+    {# <div class="w-full flex mx-auto hero">
       <div id="hero" class="mt-24 container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
         <div id="hero-label" class="flex flex-col w-full md:w-3/5 justify-center items-start text-center md:text-left">
           <span class="text-4xl text-white">{{ slogan }}</span>
@@ -72,11 +141,10 @@
         <div id="disqus_thread"></div>
       </div>
       {% endif %}
-    </div>
+    </div> #}
 
-    {% include './footer.njk' %}
 
-    <script src="{{ '/assets/main.js' | url }}"></script>
+    <script src="{{ '/scripts/main.js' }}"></script>
 
     <script>
 

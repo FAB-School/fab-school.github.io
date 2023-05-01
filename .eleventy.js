@@ -1,7 +1,8 @@
 const i18n = require('eleventy-plugin-i18n')
 const filters = require('./utils/filters.js')
-const site = require('./src/_data/site.json');
-const localizedCollections = ['post'];
+const passthroughs = require('./utils/passthroughs.js')
+const site = require('./src/_data/site.json')
+const localizedCollections = ['post']
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(i18n, {
     translations: {
@@ -12,6 +13,14 @@ module.exports = function (eleventyConfig) {
       },
     },
   })
+  // Copy our static assets to the output folder
+  
+  passthroughs.forEach((passthroughPath) => {
+    eleventyConfig.addPassthroughCopy(passthroughPath)
+  })
+  eleventyConfig.addPassthroughCopy({'./node_modules/@fontsource/play/files/*.woff2': 'fonts'})
+
+  eleventyConfig.addPassthroughCopy({'./node_modules/@fontsource/play/files/*.woff': 'fonts'})
   // Filters
   Object.keys(filters).forEach((filterName) => {
     eleventyConfig.addFilter(filterName, filters[filterName])

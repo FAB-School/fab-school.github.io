@@ -10,7 +10,7 @@
 
     "defaultLang": "en",
     "langs": [{
-        "id": "en",
+        "id": "us",
         "name": "English"
     }, {
         "id": "tr",

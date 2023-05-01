@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="{{ locale }}">
-  <head profile="http://www.w3.org/2005/10/profile">
+  <head>
     {% if site.googleTagId %}
       <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.googleTagId }}"></script>
@@ -19,27 +19,27 @@
     <meta name="description" content="{{ description }}">
     <meta name="keywords" content="{{ keywords }}">
     <link rel="icon" type="image/png" href="{{ site.faviconUrl | url  }}">
-    <link rel="stylesheet" type="text/css" href="{{ '/assets/main.css' | url }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ '/styles/main.css' }}"/>
     <link href="https://unpkg.com/prismjs@1.21.0/themes/prism-okaidia.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
   </head>
-  <body>
+  <body style="background-image: url('/images/computing.jpg')">
     {% include './top-nav.njk' %}
-    <img src="/images/computing.jpg"/>
-    <div class="container w-full flex flex-wrap mx-auto px-2 pt-8 lg:pt-16 mt-16">
-      <div class="content w-full">
-        {{ content | safe }}
-      </div>
-      {% if not (disableComments or false) %}
-      <div class="content w-full">
-        <div id="disqus_thread"></div>
-      </div>
-      {% endif %}
-    </div>
+    
 
+      <div class="container w-full flex flex-wrap mx-auto px-2 pt-8 lg:pt-16 mt-16">
+        <div class="content w-full">
+          {{ content | safe }}
+        </div>
+        {% if not (disableComments or false) %}
+        <div class="content w-full">
+          <div id="disqus_thread"></div>
+        </div>
+        {% endif %}
+      </div>
     {% include './footer.njk' %}
 
-    <script src="{{ '/assets/main.js' | url }}"></script>
+    <script src="{{ '/scripts/main.js' }}"></script>
 
     <script>
 

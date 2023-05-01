@@ -25,7 +25,10 @@ var locale =
 
 let redirUrl = "{{ '/' | url }}" + locale + "/";
 console.log("Redirecting to :" + redirUrl);
-window.location.replace(redirUrl);
+setTimeout(() => {
+  window.location.replace(redirUrl);
+}, 5000)
+
 </script>
 
 </body>

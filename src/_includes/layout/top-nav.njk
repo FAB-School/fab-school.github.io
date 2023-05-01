@@ -35,13 +35,22 @@
       </ul>
 
       {# Lnaguages #}
-      <ul class="list-reset lg:flex justify-end items-center list-none">
+      <select>
+       {% for lang in site.langs %}
+        
+          <option value="{{lang.id}}">
+            {{lang.name}}
+          </option>
+        {% endfor %}
+      </select>
+      {# <ul class="list-reset lg:flex justify-end items-center list-none">
         {% for lang in site.langs %}
+        
           <li class="bg-red mr-3 lg:py-0">
             <a href="{{ ('/' + lang.id) | url }}" class="inline-block text-xs no-underline">{{lang.name}}</a>
           </li>
         {% endfor %}
-      </ul>
+      </ul> #}
 
     </div>
   </div>
