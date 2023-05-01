@@ -153,6 +153,7 @@ ol.languages {
 @media (max-width: 576px) {
  
     ol.languages li a img{
+        width: 30px;
         height: 30px;
     }
   }
